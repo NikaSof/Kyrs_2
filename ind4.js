@@ -69,16 +69,20 @@
 
 //Номер 4_6
 
-// function test_urlImg(n){
-//     const testPattern = /(?<=img\s+src=")[^"]+/;
-//     return testPattern.test(n)
+// function extractImageURLs(html) {
+//     const regex = /<img[^>]+src="([^">]+)"/g;
+  
+//     const imageUrls = [];
+  
+//     let match;
+//     while ((match = regex.exec(html)) !== null) {
+//       const imageUrl = match[1];
+//       imageUrls.push(imageUrl);
+//     }
+  
+//     return imageUrls;
 // }
 
-// process.stdin.on('data', data => {
-//   let n = data.toString().trim();
-//   console.log(test_urlImg(n));
-// });
-
-// Пример ввода и вывода:
-// //<img src="images/dinosaur.jpg" />
-// // true
+// const html = '<html> <body> <img src="https://example.com/image1.jpg"> <img src="https://example.com/image2.jpg"> <img src="https://example.com/image3.jpg"> </body> </html>';
+// const imageUrls = extractImageURLs(html);
+// console.log(imageUrls);
